@@ -1,9 +1,8 @@
 export default function Form() {
   return (
-    <>
-      <h1>Weather App</h1>
-      <p>Add new Activity:</p>
-      <form>
+    <div>
+      <header className="App-header">Add new Activity:</header>
+      <form className="App">
         <label aria-labelledby="name" htmlFor="name">
           Name:
         </label>
@@ -14,6 +13,6 @@ export default function Form() {
         <input name="checkbox" id="checkbox" type="checkbox"></input>
         <button type="submit">Submit</button>
       </form>
-    </>
+    </div>
   );
 }
