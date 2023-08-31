@@ -1,8 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
+import { uid } from "uid";
 
 function App() {
-  return <Form />;
+  const [activity, setActivity] = useState("");
+
+  function handleAddActivity(activityObject) {
+    setActivity([{ id: uid(8), ...activityObject }, ...activity]);
+  }
+
+  return <Form onHandleAddActivity={handleAddActivity} />;
 }
 
 export default App;
