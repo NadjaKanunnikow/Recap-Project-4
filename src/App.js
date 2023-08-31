@@ -10,7 +10,7 @@ function App() {
     setActivity([{ id: uid(8), ...activityObject }, ...activity]);
   }
 
-  return <Form onHandleAddActivity={handleAddActivity} />;
+  return <Form onAddActivity={handleAddActivity} />;
 }
 
 export default App;
